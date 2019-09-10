@@ -4,6 +4,5 @@
 <p>Hello, this is my first page {{$message}}</p>
 <div>
 	<p>New div added</p>
-	<h4>Heading first</h4>
 </div>
 @endsection
