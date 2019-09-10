@@ -5,4 +5,5 @@
 <div>
 	<p>Another div added diff test (test commit without add)</p>
 </div>
+<div id="hello"></div>
 @endsection
