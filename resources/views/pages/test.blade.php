@@ -5,4 +5,7 @@
 <div>
 	<p>New div added</p>
 </div>
+<div>
+	<p>Another div added</p>
+</div>
 @endsection
