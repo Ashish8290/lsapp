@@ -23,5 +23,10 @@ class TestsController extends Controller
     {
     	$title = 'Accessing Variables';
     	return view('pages.accessvar')->with('title', $title);
-    }
+	}
+	
+	public function testFunc($name)
+	{
+		return "Say hello ${name}";
+	}
 }

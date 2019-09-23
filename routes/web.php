@@ -30,3 +30,4 @@ Route::view('/testView', 'pages.viewroutetest');
 
 Route::get('test', 'TestsController@testPage');
 Route::get('demovar', 'TestsController@variableExample');
+Route::get('demo/{name}', 'TestsController@testFunc');
