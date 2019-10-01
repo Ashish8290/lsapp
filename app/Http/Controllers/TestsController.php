@@ -16,6 +16,24 @@ class TestsController extends Controller
     	//or use this
     	$data = array("title"=> $title, "message"=>"Hello dynamic");
     	return view('pages.test')->with($data);
+	}
+	
+
+	public function services()
+    {
+		$title = "Services Page";
+		$data = array(
+			"title"=>$title,
+			"services"=>array("Web Designing", "Reactive Programing", "SEO")
+		);
+    	return view('pages.service')->with($data);
+	}
+	
+	public function about()
+    {
+		$title = "About Page";
+		$data = array("title"=>$title, "pagetitle"=>"About Us");
+    	return view('pages.about', $data);
     }
 
 

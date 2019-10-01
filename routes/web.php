@@ -29,5 +29,8 @@ Route::get('/users/{id}', function($id){
 Route::view('/testView', 'pages.viewroutetest');
 
 Route::get('test', 'TestsController@testPage');
+Route::get('service', 'TestsController@services');
+Route::get('about', 'TestsController@about');
 Route::get('demovar', 'TestsController@variableExample');
 Route::get('demo/{name}', 'TestsController@testFunc');
+Route::resource('posts', 'PostsController');
