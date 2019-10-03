@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+//using modal to intrect with database
+use App\Post;
 
 class PostsController extends Controller
 {
@@ -13,7 +15,10 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        //using eloquent methord to call function of modal
+        //do not need to write sql query
+        $posts = Post::all();
+        return view("posts.index")->with('posts', $posts);
     }
 
     /**
@@ -45,7 +50,8 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+        return view("posts/show")->with("post", $post);
     }
 
     /**
