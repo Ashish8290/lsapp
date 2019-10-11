@@ -9,6 +9,7 @@
         <a class="nav-item nav-link" href="about">About</a>
         <a class="nav-item nav-link" href="service">Services</a>
         <a class="nav-item nav-link" href="test">Test Page</a>
+        <a class="nav-item nav-link" href="posts">Blogs</a>
         <a class="nav-item nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
       </div>
     </div>

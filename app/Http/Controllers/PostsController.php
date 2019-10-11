@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 //using modal to intrect with database
 use App\Post;
+use DB;
 
 class PostsController extends Controller
 {
@@ -15,9 +16,26 @@ class PostsController extends Controller
      */
     public function index()
     {
+        //select data from database-->useig select query
+        // $posts = DB::select('SELECT * FROM posts');
+
         //using eloquent methord to call function of modal
         //do not need to write sql query
-        $posts = Post::all();
+
+        //get all posts
+        // $posts = Post::all();
+
+        //get post by order
+        // $posts = Post::orderBy('title', 'desc')->get();
+
+        //get a specific post by column name
+        // $posts = Post::where('title', 'Post Second')->get();
+
+        //get a specific no of column
+        // $posts = Post::where('title', 'Post Second')->take(1)->get();
+
+        //paginating
+        $posts = Post::orderBy('title', 'desc')->paginate(10);
         return view("posts.index")->with('posts', $posts);
     }
 
@@ -29,6 +47,7 @@ class PostsController extends Controller
     public function create()
     {
         //
+        return view('posts.create');
     }
 
     /**
